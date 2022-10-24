@@ -1,10 +1,9 @@
 import { FilterableField } from '@nestjs-query/query-graphql';
-import { Field, ObjectType } from '@nestjs/graphql';
-import { PrimaryColumn } from 'typeorm';
+import { ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class BaseDTO {
-  @Field()
+  @FilterableField()
   id: string;
 
   @FilterableField()

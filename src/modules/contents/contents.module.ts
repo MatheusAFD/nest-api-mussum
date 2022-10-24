@@ -1,19 +1,18 @@
-import { Module } from '@nestjs/common';
 import {
   NestjsQueryGraphQLModule,
   PagingStrategies,
 } from '@nestjs-query/query-graphql';
 import { NestjsQueryTypeOrmModule } from '@nestjs-query/query-typeorm';
-import { Content } from './entities/content.entity';
+import { Module } from '@nestjs/common';
 import { ContentDTO } from './dto/content.dto';
 import { CreateContentInput } from './dto/create-content.input';
 import { UpdateContentInput } from './dto/update-content.input';
+import { Content } from './entities/content.entity';
 
 @Module({
   imports: [
     NestjsQueryGraphQLModule.forFeature({
       imports: [NestjsQueryTypeOrmModule.forFeature([Content])],
-
       resolvers: [
         {
           DTOClass: ContentDTO,

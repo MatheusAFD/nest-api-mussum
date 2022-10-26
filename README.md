@@ -26,23 +26,45 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## prerequisites
+
+- Docker
+- Docker compose
+
 ## Installation
 
+Clone the project
+
 ```bash
-$ npm install
+$ git clone https://github.com/MatheusAFD/nest-api-mussum
+```
+
+Go to project folder
+
+```bash
+cd nest-api-mussum
+```
+
+Install dependencies
+
+```bash
+$ yarn
+```
+
+Run migrations for database
+
+```bash
+$ yarn typeorm migration:run
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
+$ yarn start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn start:prod
 ```
 
 ## Test
